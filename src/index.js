@@ -8,6 +8,9 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let humidity = response.data.temperature.humidity + "%";
   let wind = response.data.wind.speed + " m/s";
+  let iconElement = document.querySelector("#icon");
+  let iconUrl = response.data.condition.icon_url;
+  iconElement.innerHTML = `<img src="${iconUrl}"class="current-temperature-icon"/>`;
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
   descriptionElement.innerHTML = description;
