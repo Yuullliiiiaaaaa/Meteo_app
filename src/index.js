@@ -2,8 +2,17 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#current-temperature");
   let temperature = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#current-city");
+  let descriptionElement = document.querySelector("#description");
+  let description = response.data.condition.description;
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let humidity = response.data.temperature.humidity + "%";
+  let wind = response.data.wind.speed + " m/s";
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
+  descriptionElement.innerHTML = description;
+  humidityElement.innerHTML = humidity;
+  windElement.innerHTML = wind;
 }
 
 function search(event) {
@@ -37,7 +46,7 @@ function formatDate(date) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
 
   let formattedDay = days[day];
