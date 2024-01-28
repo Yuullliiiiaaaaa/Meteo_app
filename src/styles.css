@@ -88,7 +88,19 @@ main {
   position: relative;
   top: -38px;
 }
-
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+}
+.weather-forecast-data {
+  color: grey;
+  opacity: 0.8;
+}
+.weather-forecast-temperature-min {
+  color: grey;
+  opacity: 0.5;
+}
 footer {
   border-top: 1px solid #f9f7fe;
   text-align: center;
